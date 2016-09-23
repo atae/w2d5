@@ -23,11 +23,11 @@ module HashFunction
       copy << ARBITRARY_NUMBER
     end
     copy.flatten!
-    hashes = []
+
     copy.map do |el|
       hash(el)
     end.inject(:+)
-    
+
   end
 
   def hash_string(string)
